@@ -1,0 +1,23 @@
+
+<div class="container col-md-6">
+    <h1 style="color: red;text-align: center;">Update Employee form</h1>
+      <form class="container" (ngSubmit)="UpdateEmployeeData()">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Employee Id</label>
+            <input type="number" class="form-control" id="eId" name="e_id" [(ngModel)]="employee.e_id">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Employee Name</label>
+            <input type="text" class="form-control" id="eName" name="e_name" [(ngModel)]="employee.e_name">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Employee Email</label>
+            <input type="email" class="form-control" id="eEmail" name="e_email" [(ngModel)]="employee.e_email">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Mobile no</label>
+            <input type="number" class="form-control" id="eMobile" name="e_mobile" [(ngModel)]="employee.e_mobile">
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+      </form>
+</div>

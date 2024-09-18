@@ -1,0 +1,24 @@
+<table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">EID</th>
+        <th scope="col">EMPLOYEE_NAME</th>
+        <th scope="col">EMPLOYEE_EMAIL</th>
+        <th scope="col">EMPLOYEE_MOBILE_NO</th>
+        <th scope="col">Action for Update</th>
+        <th scope="col">Action for Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of Employees">
+        <td>{{employee.e_id}}</td>
+        <td>{{employee.e_name}}</td>
+        <td>{{employee.e_email}}</td>
+        <td>{{employee.e_mobile}}</td>
+        <td><button (click)="UpdateEmployee(employee.e_id)" class="btn btn-primary">Update</button></td>
+        <td><button (click)="DeleteEmployeeData(employee.e_id)" [routerLink]="'/'" class="btn btn-primary">Delete</button></td>
+
+      </tr>
+     
+    </tbody>
+  </table>
